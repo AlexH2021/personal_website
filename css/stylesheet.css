@@ -1,7 +1,31 @@
 body{
-    background-color: rgb(179, 171, 162);
+    background-color: rgb(231, 226, 226);
+}
+
+h1, h2{
+    text-align: center;
 }
 
 h1{
-    color: aqua;
+    color: blue;
+
+}
+
+.logo-selfie{
+    list-style-type: none;
+}
+nav{
+    float: right;
+    width: 50%;
+}
+
+.first-intro{
+    float: left;
+    width: 50%;
+}
+
+.self-intro:after{
+  content: "";
+  display: table;
+  clear: both;
 }
