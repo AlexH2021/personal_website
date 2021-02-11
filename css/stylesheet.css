@@ -1,31 +1,43 @@
-body{
+body {
     background-color: rgb(231, 226, 226);
 }
 
-h1, h2{
+h1,
+h2 {
     text-align: center;
 }
 
-h1{
+h1 {
     color: blue;
-
 }
 
-.logo-selfie{
+
+/* lab 3 */
+
+.logo-selfie {
     list-style-type: none;
 }
-nav{
+
+nav {
     float: right;
-    width: 50%;
+    width: 20%;
 }
 
-.first-intro{
+.first-intro {
     float: left;
-    width: 50%;
+    width: 80%;
 }
 
-.self-intro:after{
-  content: "";
-  display: table;
-  clear: both;
+.self-intro:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* lab 4 */
+
+.link-to-misc {
+    background-color: lightblue;
+    text-align: center;
 }
