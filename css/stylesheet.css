@@ -1,5 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background-color: lightgray;
+}
+
 body {
-    background-color: rgb(231, 226, 226);
+    width: 95%;
+    margin: 12px auto 0;
 }
 
 h1,
@@ -11,37 +21,88 @@ h1 {
     color: blue;
 }
 
+#index_h1 {
+    font-family: 'Montserrat', sans-serif;
+}
 
-/* lab 3 */
 
-.logo-selfie {
-    list-style-type: none;
+/* header */
+
+nav,
+main,
+footer {
+    padding: .25em;
 }
 
 nav {
-    float: right;
-    width: 20%;
-}
-
-.first-intro {
-    float: left;
-    width: 80%;
-}
-
-.self-intro:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-/* lab 4 */
-
-.link-to-misc {
+    height: 48px;
     background-color: lightblue;
-    text-align: center;
 }
 
-#index_h1 {
-    font-family: 'Montserrat', sans-serif;
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+nav li a {
+    font-family: cursive;
+    color: #ff1e4b;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: khaki;
+}
+
+
+/* header school */
+
+.school_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.school_header .logo {
+    flex: 0;
+}
+
+.school_header .left_side {
+    flex: 1;
+}
+
+
+/* main */
+
+main {
+    line-height: 1.4rem;
+    display: flex;
+}
+
+section {
+    flex: 4;
+}
+
+.course-list ul {
+    list-style-type: none;
+    padding-inline-start: 15px;
+}
+
+.course-list ul li::before {
+    content: "-";
+    margin-right: 4px;
+}
+
+
+/* footer */
+
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    height: 2rem;
+    text-align: center;
 }
