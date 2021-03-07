@@ -14,6 +14,9 @@ footer {
     text-align: center;
 }
 
+
+/* index page */
+
 #index_h1 {
     font-family: 'Montserrat', sans-serif;
 }
@@ -28,17 +31,32 @@ nav ul {
     gap: 2em;
 }
 
-nav ul li {}
-
 nav li a {
     font-family: cursive;
-    color: #ff1e4b;
+    color: #334259;
     font-size: 1.4rem;
     text-decoration: none;
 }
 
 nav li a:hover {
-    color: khaki;
+    color: #db504a;
+}
+
+main {
+    line-height: 1.4rem;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0 1em;
+}
+
+.first-intro {
+    grid-column: 1/2;
+}
+
+.selfie {
+    grid-column: 2/3;
+    grid-row: 1/2;
 }
 
 
@@ -47,11 +65,8 @@ nav li a:hover {
 
 /* courses page */
 
-main {
-    line-height: 1.4rem;
-}
-
 .course-list ul {
+    list-style-type: none;
     padding-inline-start: 15px;
 }
 
@@ -67,5 +82,4 @@ footer {
     margin-top: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
