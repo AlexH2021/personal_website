@@ -45,7 +45,7 @@ nav li a:hover {
 main {
     line-height: 1.4rem;
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 5fr 1fr;
     grid-template-rows: 1fr;
     gap: 0 1em;
 }
@@ -57,10 +57,26 @@ main {
 .selfie {
     grid-column: 2/3;
     grid-row: 1/2;
+    justify-self: end;
 }
 
 
 /* school page */
+
+.school_header {
+    display: flex;
+    /* grid-template-columns: 1fr 5fr; */
+}
+
+.school_header h1 {
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
+.school_header+h2 {
+    margin: 0;
+    color: #334259;
+}
 
 
 /* courses page */
