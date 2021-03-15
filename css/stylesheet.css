@@ -26,15 +26,12 @@ footer {
 
 nav ul {
     list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 2em;
 }
 
 nav li a {
     font-family: cursive;
     color: #334259;
-    font-size: 1.4rem;
+    font-size: 1rem;
     text-decoration: none;
 }
 
@@ -42,7 +39,7 @@ nav li a:hover {
     color: #db504a;
 }
 
-main {
+.index-main {
     line-height: 1.4rem;
     display: grid;
     grid-template-columns: 5fr 1fr;
@@ -98,6 +95,11 @@ main {
     margin-right: 4px;
 }
 
+.course-items {
+    border-bottom: 1px solid#334259;
+    margin: 1.5em 0;
+}
+
 
 /* footer */
 
@@ -105,4 +107,26 @@ footer {
     margin-top: auto;
     display: flex;
     justify-content: center;
+}
+
+
+/* media query */
+
+
+/* larger screen */
+
+@media screen and (min-width: 600px) {
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+    }
+    /* course page - course-items section */
+    .course-items {
+        display: grid;
+        gap: .5rem;
+        grid-template-columns: 1fr 2fr;
+        border-bottom: 2px solid#334259;
+        margin: 1.5em 0;
+    }
 }
