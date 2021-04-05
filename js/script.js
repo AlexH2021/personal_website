@@ -25,7 +25,7 @@ function courseArray() {
 }
 
 function findCourse(courseList) {
-    //find course
+    //find course, change background to green if find the course, else add in array
     do {
         user_input = window.prompt('Enter 4-digit from code: ');
         if (user_input === null) { return }
