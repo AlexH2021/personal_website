@@ -1,8 +1,5 @@
-let courseList = [
-    { code: "ACIT 1620", name: "Web Fundamental Technologies" },
-    { code: "ACIT 1420", name: "Introduction to Systems Administration" },
-    { code: "ACIT 1630", name: "Database System" }
-];
+//define element
+const course_items = document.querySelectorAll('.course-items');
 
 function checkInp(x) {
     // let regex = /^[a-zA-Z]+$/; // only letter
@@ -14,23 +11,51 @@ function checkInp(x) {
     }
 };
 
-do {
-    user_input = window.prompt('Enter 4-digit from code: ');
-} while (!checkInp(user_input) || (user_input.length !== 4))
+function courseArray() {
+    // find course items and return
+    let courseArr = [];
 
-flag = 0;
+    for (item of course_items) {
+        code = item.innerText.split("\n\n")[0];
+        date = item.innerText.split("\n\n")[2];
+        courseArr.push({ code, date });
+    }
 
-for (const item of courseList) {
-    if (item.code.includes(user_input)) {
-        console.log(`Yes I am taking the course: ${item.code} - ${item.name}`);
-    }
-    if (!(item.code.includes(user_input))) {
-        flag += 1;
-    }
+    return courseArr;
 }
 
-if (flag === courseList.length) {
-    courseList.push({ code: user_input, name: null })
-    console.log(`Added code: "${user_input}", name: "${null}" into course list.`)
-    console.log(courseList)
+function findCourse(courseList) {
+    //find course
+    do {
+        user_input = window.prompt('Enter 4-digit from code: ');
+        if (user_input === null) { return }
+    } while (!checkInp(user_input) || (user_input.length !== 4));
+
+    flag = 0;
+
+    for (let item of courseList) {
+        if (item.code.includes(user_input)) {
+            for (jtem of course_items) {
+                if ((jtem.childNodes[1].innerText.split('-')[0].split(' ')[1]).includes(user_input)) {
+                    jtem.classList.toggle('green');
+                }
+            }
+        }
+        if (!(item.code.includes(user_input))) {
+            flag += 1;
+        }
+    }
+
+    if (flag === courseList.length) {
+        let tmp_code = `ACIT ${user_input}`;
+        let tmp_date = 'N/A';
+        courseList.push({ code: tmp_code, date: tmp_date });
+        console.log(`Added code: "${tmp_code}", date: "${tmp_date}" into course list.`);
+        console.log(courseList);
+    }
+
 }
+
+//run function
+let CourseList = courseArray();
+findCourse(CourseList);

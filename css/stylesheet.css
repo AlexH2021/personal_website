@@ -110,6 +110,13 @@ footer {
 }
 
 
+/* green background when choosed */
+
+.green {
+    background-color: green;
+}
+
+
 /* media query */
 
 
